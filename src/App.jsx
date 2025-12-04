@@ -1,0 +1,35 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import NotFound from "./components/NotFound";
+import { useEffect } from "react";
+
+// Import AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
+      offset: 100
+    });
+  }, []);
+
+  return (
+    <Router>
+      <div className="min-h-screen bg-gray-50">
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
