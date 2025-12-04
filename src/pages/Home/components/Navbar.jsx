@@ -1,5 +1,5 @@
 import { navItems } from '../../../data/data';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, Events, animateScroll as scroll } from 'react-scroll';
 
 const Navbar = () => {
@@ -7,6 +7,8 @@ const Navbar = () => {
     const [activeSection, setActiveSection] = useState('');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [navbarHeight, setNavbarHeight] = useState(0);
+    const navbarRef = useRef(null);
+    const mobileMenuRef = useRef(null);
 
     useEffect(() => {
         // Mesurer la hauteur réelle de la navbar
@@ -44,6 +46,28 @@ const Navbar = () => {
         };
     }, []);
 
+    // Fermer le menu mobile lorsqu'on clique en dehors
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            // Si le menu mobile est ouvert ET que le clic est en dehors du menu ET en dehors du bouton hamburger
+            if (isMobileMenuOpen && 
+                mobileMenuRef.current && 
+                !mobileMenuRef.current.contains(event.target) &&
+                navbarRef.current &&
+                !navbarRef.current.contains(event.target)) {
+                setIsMobileMenuOpen(false);
+            }
+        };
+
+        // Ajouter l'event listener
+        document.addEventListener('mousedown', handleClickOutside);
+        
+        // Nettoyer l'event listener
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isMobileMenuOpen]); // Re-exécuter quand isMobileMenuOpen change
+
     // Fonction pour mettre à jour la section active
     const handleSetActive = (to) => {
         setActiveSection(to);
@@ -61,13 +85,13 @@ const Navbar = () => {
         return navbarHeight > 0 ? -navbarHeight - 5 : -90; // -90 par défaut
     };
 
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
     return (
         <nav 
-            ref={(el) => {
-                if (el && !navbarHeight) {
-                    setNavbarHeight(el.offsetHeight);
-                }
-            }}
+            ref={navbarRef}
             className={`
                 fixed top-0 left-0 w-full py-3 z-50 transition-all duration-300
                 ${isScrolled 
@@ -156,7 +180,8 @@ const Navbar = () => {
                     {/* Bouton menu mobile */}
                     <div className="md:hidden">
                         <button 
-                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            ref={navbarRef}
+                            onClick={toggleMobileMenu}
                             className="text-gray-700 p-2 hover:text-[#FF7122] transition-colors duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF7122] focus:ring-opacity-50"
                             aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
                         >
@@ -175,7 +200,10 @@ const Navbar = () => {
 
                 {/* Menu mobile avec react-scroll */}
                 {isMobileMenuOpen && (
-                    <div className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
+                    <div 
+                        ref={mobileMenuRef}
+                        className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4"
+                    >
                         <div className="flex flex-col space-y-2">
                             {navItems.map((item) => (
                                 <Link
