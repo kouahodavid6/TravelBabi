@@ -9,7 +9,7 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
-            
+
             const sections = ['accueil','fonctionnalites', 'etoiles', 'abonnements', 'avantages'];
             const currentSection = sections.find(section => {
                 const element = document.getElementById(section);
@@ -19,7 +19,7 @@ const Navbar = () => {
                 }
                 return false;
             });
-            
+
             if (currentSection) {
                 setActiveSection(currentSection);
             }
@@ -62,7 +62,7 @@ const Navbar = () => {
                             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                             src="/LogoTravelBabi.jpg" 
                             alt="Logo TravelBabi"
-                            className="w-12 h-12 sm:w-15 sm:h-15 md:w-14 md:h-14 rounded-xl object-cover transition-transform duration-500 shadow-lg cursor-pointer hover:scale-105"
+                            className="w-12 h-12 sm:w-15 sm:h-15 md:w-14 md:h-14 rounded-xl object-contain transition-transform duration-500 shadow-lg cursor-pointer hover:scale-105"
                         />
                         <h1 className='text-gray-900 font-bold text-xl'>Travel<span className='text-[#ff7122]'>Babi</span></h1>
                     </div>

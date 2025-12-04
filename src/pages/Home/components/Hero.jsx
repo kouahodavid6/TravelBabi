@@ -79,7 +79,7 @@ const Hero = () => {
                                                 <img 
                                                     src="/LogoTravelBabi.jpg" 
                                                     alt="Logo TravelBabi"
-                                                    className="w-6 h-6 rounded object-cover"
+                                                    className="w-6 h-6 rounded-xl object-contain"
                                                 />
                                             </div>
                                             <div>
