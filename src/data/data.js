@@ -7,6 +7,7 @@ export const navItems = [
     { id: 'etoiles', label: 'Étoiles' },
     { id: 'abonnements', label: 'Abonnements' },
     { id: 'avantages', label: 'Avantages' },
+    { id: 'screens', label: 'Écrans' },
 ];
 
 // Données pour le composant Fonctionnalités
@@ -161,5 +162,56 @@ export const benefits = [
         icon: Shield,
         title: 'Fiable',
         description: 'Des données vérifiées et mises à jour en continu pour votre sécurité.'
+    }
+];
+
+export const screens = [
+    {
+        title: 'Splash Screen',
+        description: 'Première impression élégante',
+        image: '/Splash Screen.png',
+        gradient: 'from-orange-400 to-[#FF7122]'
+    },
+    {
+        title: 'Onboarding 1',
+        description: 'Découvrez les fonctionnalités',
+        image: '/Onboarding Screen 1.png',
+        gradient: 'from-blue-400 to-blue-600'
+    },
+    {
+        title: 'Onboarding 2',
+        description: 'Comment utiliser l\'app',
+        image: '/Onboarding Screen 2.png',
+        gradient: 'from-green-400 to-green-600'
+    },
+    {
+        title: 'Onboarding 3',
+        description: 'Prêt à commencer',
+        image: '/Onboarding Screen 3.png',
+        gradient: 'from-purple-400 to-purple-600'
+    },
+    {
+        title: 'Interface principale',
+        description: 'Accueil et recherche',
+        image: '/Interface.jpg',
+        gradient: 'from-[#FF7122] to-orange-500'
+    },
+    {
+        title: 'Vue liste',
+        description: 'Itinéraires en détail',
+        image: '/List.png',
+        gradient: 'from-pink-400 to-pink-600'
+    },
+    {
+        title: 'Vue carte',
+        description: 'Visualisation géographique',
+        image: '/Map.png',
+        gradient: 'from-teal-400 to-teal-600'
+    },
+    {
+        title: 'Détails',
+        description: 'Informations complètes',
+        image: '/Details.png',
+        gradient: 'from-yellow-400 to-orange-500'
     }
 ];

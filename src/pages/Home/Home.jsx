@@ -4,6 +4,7 @@ import Fonctionnement from "./components/Fonctionnalites";
 import Etoiles from "./components/Etoiles";
 import Abonnement from "./components/Abonnement";
 import Avantages from "./components/Avantages";
+import AppScreens from "./components/AppScreens";
 import Footer from "./components/Footer";
 
 const Home = () => {
@@ -27,6 +28,9 @@ const Home = () => {
             </div>
             <div data-aos="fade-up" data-aos-delay="100">
                 <Avantages />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <AppScreens />
             </div>
             <Footer />
         </>
