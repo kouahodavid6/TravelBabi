@@ -45,20 +45,12 @@ const Hero = () => {
                         </div>
 
                         {/* Points clés sous les boutons */}
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
+                        <div className="pt-2">
                             <div className="flex items-center gap-2">
                                 <div className="w-5 h-5 bg-[#FF7122]/10 rounded-full flex items-center justify-center">
                                     <Star className="w-2.5 h-2.5 text-[#FF7122]" />
                                 </div>
-                                <span className="text-xs sm:text-sm font-medium text-gray-700">Itinéraires optimisés</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <div className="w-5 h-5 bg-[#FF7122]/10 rounded-full flex items-center justify-center">
-                                    <svg className="w-2.5 h-2.5 text-[#FF7122]" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                    </svg>
-                                </div>
-                                <span className="text-xs sm:text-sm font-medium text-gray-700">Prix transparents</span>
+                                <span className="text-xs sm:text-sm font-medium text-gray-700">Itinéraires adaptés</span>
                             </div>
                         </div>
                     </div>
@@ -105,7 +97,7 @@ const Hero = () => {
                     <div className="flex flex-col items-center gap-1 text-gray-400">
                         <span className="text-xs font-medium">Défiler</span>
                         <div className="w-5 h-8 border border-gray-300 rounded-full flex justify-center">
-                            <div className="w-0.5 h-2 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
+                            <div className="w-0.5 h-2 bg-gray-400 rounded-full mt-2 animate-bounce"></div>
                         </div>
                     </div>
                 </div>
