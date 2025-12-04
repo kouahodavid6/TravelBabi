@@ -166,7 +166,7 @@ const AppScreens = () => {
                                                               h-3 w-16 sm:h-3.5 sm:w-20 md:h-4 md:w-24 lg:h-5 lg:w-28 xl:h-6 xl:w-32 2xl:h-7 2xl:w-36 
                                                               bg-gray-900 rounded-b-lg sm:rounded-b-xl"></div>
                                                     
-                                                    {/* Écran */}
+                                                    {/* Écran - Container pour l'image avec overflow caché */}
                                                     <div className={`relative bg-white w-full 
                                                               rounded-[1.3rem] sm:rounded-[1.6rem] md:rounded-[2rem] lg:rounded-[2.5rem] xl:rounded-[3rem] 
                                                               overflow-hidden 
@@ -175,12 +175,18 @@ const AppScreens = () => {
                                                                 isMobile ? 'h-[320px] sm:h-[360px]' :
                                                                 isLargeDesktop ? 'h-[580px] lg:h-[620px] xl:h-[680px]' :
                                                                 'h-[420px] md:h-[480px] lg:h-[520px]'}`}>
-                                                        <img 
-                                                            src={screen.image} 
-                                                            alt={`${screen.title} - TravelBabi`}
-                                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                                            loading="lazy"
-                                                        />
+                                                        {/* Container d'image avec alignement en haut */}
+                                                        <div className="relative w-full h-full flex items-start justify-center overflow-hidden">
+                                                            <img 
+                                                                src={screen.image} 
+                                                                alt={`${screen.title} - TravelBabi`}
+                                                                className="w-full h-auto max-w-full object-contain mt-2"
+                                                                style={{ 
+                                                                    objectPosition: 'top center' // Pour voir le haut de l'image
+                                                                }}
+                                                                loading="lazy"
+                                                            />
+                                                        </div>
                                                         <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent"></div>
                                                     </div>
                                                     
