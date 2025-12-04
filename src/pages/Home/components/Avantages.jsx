@@ -2,8 +2,8 @@ import { benefits } from "../../../data/data";
 
 const Avantages = () => {
     return (
-        <div id='avantages' className="pt-6">
-            <section className='pt-16 bg-white'>
+        <div id='avantages' className="pt-6 bg-white">
+            <section className='pt-16'>
                 <div className="container mx-auto px-4 mb-28">
                     <div className='mb-12'>
                         <h2 className="text-2xl md:text-3xl font-black text-center mb-3 text-black">

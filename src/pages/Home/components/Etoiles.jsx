@@ -3,8 +3,8 @@ import { Star } from "lucide-react";
 
 const Etoiles = () => {
     return (
-        <div id="etoiles" className="pt-6">
-            <section className="pt-16 bg-white">
+        <div id="etoiles" className="pt-6 bg-white">
+            <section className="pt-16">
                 <div className="container mx-auto px-4">
                     <div className='mb-12'>
                         <h2 className="text-2xl md:text-3xl font-black text-center mb-3 text-black">
