@@ -15,7 +15,7 @@ const Footer = () => {
                                 <img 
                                     src="/LogoTravelBabi.jpg" 
                                     alt="Logo TravelBabi"
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-contain"
                                 />
                             </div>
                             <h1 className='text-xl md:text-2xl font-bold text-[#FF7122]/80'>TravelBabi</h1>
