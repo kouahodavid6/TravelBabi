@@ -18,7 +18,7 @@ const Avantages = () => {
                     {benefits.map((value, index) => (
                         <div
                             key={index}
-                            className="group relative bg-white rounded-xl md:rounded-2xl p-4 md:p-6 border-2 border-gray-100 hover:border-[#FF7122] transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl"
+                            className="group relative bg-white rounded-xl md:rounded-2xl p-4 md:p-6 border-2 border-gray-100 hover:border-[#FF7122] transition-all duration-300 hover:scale-[1.02] shadow-lg hover:shadow-xl overflow-hidden"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-[#FF7122]/5 to-transparent rounded-xl md:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
