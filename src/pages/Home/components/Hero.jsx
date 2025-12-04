@@ -25,7 +25,7 @@ const Hero = () => {
                 <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
                     {/* Partie texte - centrée sur mobile */}
                     <div className="space-y-6 md:space-y-8 text-center lg:text-left">
-                        <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-gray-100 rounded-full shadow-sm border border-orange-100">
+                        <div className="inline-flex items-center gap-2 px-3 py-2 md:px-4 md:py-3 mt-10 bg-gray-100 rounded-full shadow-sm border border-orange-100">
                             <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#FF7122] rounded-full animate-pulse"></div>
                             <span className="text-xs md:text-sm font-medium text-[#FF7122]">Version prototypée disponible</span>
                         </div>
