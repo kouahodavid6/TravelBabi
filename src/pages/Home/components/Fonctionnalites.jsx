@@ -3,65 +3,65 @@ import { Star } from 'lucide-react';
 
 const Fonctionnalites = () => {
     return(
-        <div id='fonctionnalites' className="pt-6">
-            <section className='pt-12 md:pt-16 bg-white'>
-                <div className="container mx-auto px-4 sm:px-6 mb-16 md:mb-28">
-                    <div className='mb-8 md:mb-12'>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-center mb-3 text-black">
-                            Un routage intelligent conçu pour le réel.
-                        </h2>
+        <section id='fonctionnalites' className="bg-white">
+            <div className="container mx-auto px-4 sm:px-6 py-16 md:py-24">
+                <div className='mb-12 md:mb-16'>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-center mb-4 text-black">
+                        Un routage intelligent conçu pour le réel.
+                    </h2>
 
-                        <p className="text-sm sm:text-base text-gray-400 text-center max-w-2xl mx-auto">
-                            Nous prenons en compte chaque station de gbaka, hub de taxi et passage piéton pour vous donner le plan de voyage le plus précis.
-                        </p>
-                    </div>
-
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-8xl mx-auto">
-                        {steps.map((step, index) => (
-                            <div
-                                key={index}
-                                className="group relative"
-                            >
-                                <div className={`${step.gradient} p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col border border-gray-200`}>
-                                    {/* Icône avec couleur depuis data.js */}
-                                    <div 
-                                        className="p-2 rounded-xl md:rounded-2xl mb-4 md:mb-6 transition-all duration-300 group-hover:scale-110 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center"
-                                        style={{ backgroundColor: step.iconBgColor }}
-                                    >
-                                        <step.icon 
-                                            className="w-5 h-5 md:w-6 md:h-6 transition-transform duration-300 group-hover:rotate-12"
-                                            style={{ color: step.iconColor }}
-                                        />
-                                    </div>
-
-                                    {/* Titre */}
-                                    <h3 className="text-base md:text-lg lg:text-xl font-bold text-gray-900 mb-3 md:mb-4">
-                                        {step.title}
-                                    </h3>
-
-                                    {/* Description */}
-                                    <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">
-                                        {step.description}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                    <p className="text-base sm:text-lg text-gray-400 text-center max-w-2xl mx-auto">
+                        Nous prenons en compte chaque station de gbaka, hub de taxi et passage piéton pour vous donner le plan de voyage le plus précis.
+                    </p>
                 </div>
 
-                <div className="space-y-8 container mx-auto px-4 sm:px-6 mb-12 md:mb-14">
-                    <div className='mb-8 md:mb-12'>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-center mb-3 text-black">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-8xl mx-auto">
+                    {steps.map((step, index) => (
+                        <div
+                            key={index}
+                            className="group relative"
+                        >
+                            <div className={`${step.gradient} p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col border border-gray-200`}>
+                                {/* Icône avec couleur depuis data.js */}
+                                <div 
+                                    className="p-2 rounded-xl md:rounded-2xl mb-4 md:mb-6 transition-all duration-300 group-hover:scale-110 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center"
+                                    style={{ backgroundColor: step.iconBgColor }}
+                                >
+                                    <step.icon 
+                                        className="w-5 h-5 md:w-6 md:h-6 transition-transform duration-300 group-hover:rotate-12"
+                                        style={{ color: step.iconColor }}
+                                    />
+                                </div>
+
+                                {/* Titre */}
+                                <h3 className="text-base md:text-lg lg:text-xl font-bold text-gray-900 mb-3 md:mb-4">
+                                    {step.title}
+                                </h3>
+
+                                {/* Description */}
+                                <p className="text-sm text-gray-500 leading-relaxed">
+                                    {step.description}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <div className="bg-gray-50 py-16 md:py-24">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <div className='mb-12 md:mb-16'>
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-center mb-4 text-black">
                             Vos trajets mémorisés.
                         </h2>
 
-                        <p className="text-sm sm:text-base text-gray-400 text-center max-w-2xl mx-auto">
+                        <p className="text-base sm:text-lg text-gray-400 text-center max-w-2xl mx-auto">
                             Sauvegardez vos itinéraires favoris (Maison à Travail, Sport à Marché) et accédez à votre historique instantanément. Notez les trajets pour aider la communauté.
                         </p>
                     </div>
 
                     <div className='grid lg:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto'>
-                        <div className="grid grid-cols-1 gap-4 md:gap-8 max-w-full">
+                        <div className="grid grid-cols-1 gap-4 md:gap-6 max-w-full">
                             {fonctionnaly.map((step, index) => (
                                 <div
                                     key={index}
@@ -81,12 +81,12 @@ const Fonctionnalites = () => {
 
                                         <div className="flex-1">
                                             {/* Titre */}
-                                            <h3 className="text-sm md:text-base lg:text-lg font-bold text-gray-900 mb-1 md:mb-2">
+                                            <h3 className="text-base md:text-lg font-bold text-gray-900 mb-1 md:mb-2">
                                                 {step.title}
                                             </h3>
 
                                             {/* Description */}
-                                            <p className="text-xs md:text-sm text-gray-500 leading-relaxed">
+                                            <p className="text-sm text-gray-500 leading-relaxed">
                                                 {step.description}
                                             </p>
                                         </div>
@@ -110,7 +110,7 @@ const Fonctionnalites = () => {
                                             <div>
                                                 <h3 className="text-base md:text-lg font-bold text-gray-900">
                                                     {testimonial.name} 
-                                                    <span className="text-xs md:text-sm text-gray-600"> ({testimonial.role})</span>
+                                                    <span className="text-sm text-gray-600"> ({testimonial.role})</span>
                                                 </h3>
                                             </div>
                                             
@@ -127,7 +127,7 @@ const Fonctionnalites = () => {
                                         
                                         {/* Citation */}
                                         <div className="pl-0 sm:pl-4 rounded-lg mt-1 md:mt-2">
-                                            <p className="text-xs md:text-sm italic text-gray-500">"{testimonial.text}"</p>
+                                            <p className="text-sm italic text-gray-500">"{testimonial.text}"</p>
                                         </div>
                                     </div>
                                     
@@ -142,8 +142,8 @@ const Fonctionnalites = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     );
 }
 

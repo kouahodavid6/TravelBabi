@@ -82,7 +82,7 @@ const Navbar = () => {
     const getScrollOffset = () => {
         // Si la navbarHeight est connue, utilisez-la
         // Sinon, utilisez une valeur par défaut (ajustez selon votre design)
-        return navbarHeight > 0 ? -navbarHeight - 5 : -90; // -90 par défaut
+        return navbarHeight > 0 ? -navbarHeight - 30 : -90; // -90 par défaut
     };
 
     const toggleMobileMenu = () => {

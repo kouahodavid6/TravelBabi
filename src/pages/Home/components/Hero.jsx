@@ -18,10 +18,10 @@ import {
 
 const Hero = () => {
     return(
-        <header id="accueil" className="relative bg-white text-black min-h-screen flex items-center overflow-hidden pt-16 md:pt-20">
+        <header id="accueil" className="relative bg-white text-black min-h-screen flex items-center overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-[#FF7122]/10"></div>
 
-            <div className="container mx-auto px-4 sm:px-6 py-12 md:py-20 relative z-10 w-full">
+            <div className="container mx-auto px-4 sm:px-6 py-16 md:py-24 relative z-10 w-full">
                 <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
                     {/* Partie texte - centrée sur mobile */}
                     <div className="space-y-6 md:space-y-8 text-center lg:text-left">

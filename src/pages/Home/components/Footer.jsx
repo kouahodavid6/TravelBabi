@@ -99,7 +99,7 @@ const Footer = () => {
                 <div className="border-t-2 border-gray-300 pt-6 md:pt-8">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4">
                         <p className="text-xs md:text-sm text-gray-600 text-center md:text-left">
-                            © 2024 TravelBabi. Tous droits réservés.
+                            © 2025 TravelBabi. Tous droits réservés.
                         </p>
                         <p className="text-xs md:text-sm text-gray-600 text-center">
                             Développé avec le ❤️ par{' '}
