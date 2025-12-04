@@ -1,211 +1,124 @@
-import { navItems } from '../../../data/data';
-import { useState, useEffect } from 'react';
-import { Link, Events, animateScroll as scroll } from 'react-scroll';
+import { Mail, Facebook, Instagram, Twitter, Play, Eye, Download  } from 'lucide-react';
+import ButtonStore from '../../components/ButtonStore';
+import { Link } from 'react-scroll';
 
-const Navbar = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [activeSection, setActiveSection] = useState('');
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [navbarHeight, setNavbarHeight] = useState(0);
-
-    useEffect(() => {
-        // Mesurer la hauteur réelle de la navbar
-        const updateNavbarHeight = () => {
-            const nav = document.querySelector('nav');
-            if (nav) {
-                setNavbarHeight(nav.offsetHeight);
-            }
-        };
-
-        updateNavbarHeight();
-        window.addEventListener('resize', updateNavbarHeight);
-
-        // Initialiser les événements de react-scroll
-        Events.scrollEvent.register('begin', () => {
-            // Optionnel: action au début du scroll
-        });
-
-        Events.scrollEvent.register('end', () => {
-            // Optionnel: action à la fin du scroll
-        });
-
-        // Gestion du scroll pour le background de la navbar
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        
-        return () => {
-            Events.scrollEvent.remove('begin');
-            Events.scrollEvent.remove('end');
-            window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('resize', updateNavbarHeight);
-        };
-    }, []);
-
-    // Fonction pour mettre à jour la section active
-    const handleSetActive = (to) => {
-        setActiveSection(to);
-    };
-
-    const handleLogoClick = () => {
-        scroll.scrollToTop();
-        setActiveSection('accueil');
-    };
-
-    // Calculer l'offset dynamiquement
-    const getScrollOffset = () => {
-        // Si la navbarHeight est connue, utilisez-la
-        // Sinon, utilisez une valeur par défaut (ajustez selon votre design)
-        return navbarHeight > 0 ? -navbarHeight - 60 : -90; // -90 par défaut
-    };
-
+const Footer = () => {
     return (
-        <nav 
-            ref={(el) => {
-                if (el && !navbarHeight) {
-                    setNavbarHeight(el.offsetHeight);
-                }
-            }}
-            className={`
-                fixed top-0 left-0 w-full py-3 z-50 transition-all duration-300
-                ${isScrolled 
-                    ? 'bg-white/95 backdrop-blur-xl shadow-lg' 
-                    : 'bg-white backdrop-blur-lg'
-                }
-            `}
-        >
-            <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
-                <div className="flex justify-between items-center">
-                    {/* Logo */}
-                    <div className="flex items-center gap-2">
-                        <img 
-                            onClick={handleLogoClick}
-                            src="/LogoTravelBabi.jpg" 
-                            alt="Logo TravelBabi"
-                            className="w-12 h-12 sm:w-14 sm:h-14 md:w-14 md:h-14 rounded-xl object-cover transition-transform duration-500 shadow-lg cursor-pointer hover:scale-105"
-                        />
-                        <h1 className='text-gray-900 font-bold text-lg sm:text-xl'>Travel<span className='text-[#ff7122]'>Babi</span></h1>
-                    </div>
-
-                    {/* Navigation desktop avec react-scroll */}
-                    <div className="hidden lg:block">
-                        <div className="ml-6 xl:ml-10 flex items-baseline space-x-4 xl:space-x-8">
-                            {navItems.map((item) => (
-                                <Link
-                                    key={item.id}
-                                    to={item.id}
-                                    spy={true}
-                                    smooth={true}
-                                    offset={getScrollOffset()} // Offset dynamique
-                                    duration={500}
-                                    onSetActive={handleSetActive}
-                                    className={`
-                                        relative text-gray-700 font-medium px-2 xl:px-3 py-2 transition-all duration-300
-                                        hover:text-[#FF7122] group text-sm xl:text-base cursor-pointer
-                                        ${activeSection === item.id ? 'text-[#FF7122] font-semibold' : ''}
-                                    `}
-                                >
-                                    {item.label}
-                                    <span className={`
-                                        absolute bottom-0 left-1/2 h-0.5 bg-[#FF7122] transition-all duration-300
-                                        transform -translate-x-1/2
-                                        ${activeSection === item.id 
-                                            ? 'w-full' 
-                                            : 'w-0 group-hover:w-full'
-                                        }
-                                    `} />
-                                </Link>
-                            ))}
+        <footer className="bg-white text-gray-900 py-16 border-t-2 border-[#FF7122]/20 pt-8">
+            <div className="container mx-auto px-4">
+                {/* Grille principale */}
+                <div className="grid md:grid-cols-3 gap-8 mb-12">
+                    {/* Carte 1 : Logo et description */}
+                    <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="w-16 h-16 rounded-xl overflow-hidden border-2 border-[#FF7122]/20">
+                                <img 
+                                    src="/LogoTravelBabi.jpg" 
+                                    alt="Logo TravelBabi"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <h1 className='text-2xl font-bold text-[#FF7122]/80'>TravelBabi</h1>
+                        </div>
+                        <p className="text-gray-600 mb-6">
+                            L'application qui révolutionne vos trajets à Abidjan avec des itinéraires intelligents.
+                        </p>
+                        <div className="flex gap-3">
+                            <a href="#" className="p-2.5 rounded-lg bg-gray-100 hover:bg-[#FF7122] hover:text-white transition-all duration-300">
+                                <Facebook className="w-5 h-5" />
+                            </a>
+                            <a href="#" className="p-2.5 rounded-lg bg-gray-100 hover:bg-[#FF7122] hover:text-white transition-all duration-300">
+                                <Instagram className="w-5 h-5" />
+                            </a>
+                            <a href="#" className="p-2.5 rounded-lg bg-gray-100 hover:bg-[#FF7122] hover:text-white transition-all duration-300">
+                                <Twitter className="w-5 h-5" />
+                            </a>
                         </div>
                     </div>
 
-                    {/* Navigation tablette avec react-scroll */}
-                    <div className="hidden md:block lg:hidden">
-                        <div className="flex items-center space-x-3">
-                            {navItems.slice(0, 4).map((item) => (
-                                <Link
-                                    key={item.id}
-                                    to={item.id}
-                                    spy={true}
-                                    smooth={true}
-                                    offset={getScrollOffset()}
-                                    duration={500}
-                                    onSetActive={handleSetActive}
-                                    className={`
-                                        relative text-gray-700 font-medium px-2 py-2 transition-all duration-300
-                                        hover:text-[#FF7122] group text-xs cursor-pointer
-                                        ${activeSection === item.id ? 'text-[#FF7122] font-semibold' : ''}
-                                    `}
-                                >
-                                    {item.label.split(' ')[0]}
-                                    <span className={`
-                                        absolute bottom-0 left-1/2 h-0.5 bg-[#FF7122] transition-all duration-300
-                                        transform -translate-x-1/2
-                                        ${activeSection === item.id 
-                                            ? 'w-full' 
-                                            : 'w-0 group-hover:w-full'
-                                        }
-                                    `} />
-                                </Link>
-                            ))}
+                    {/* Carte 2 : Navigation */}
+                    <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                        <h4 className="text-lg font-bold text-[#FF7122]/80 mb-6">
+                            Navigation rapide
+                        </h4>
+                        <div className="grid grid-cols-2 gap-4">
+                            <Link to="accueil" smooth={true} duration={500} className="flex items-center gap-2 text-gray-600 hover:text-[#FF7122]/80 transition-colors duration-300 cursor-pointer">
+                                <div className="w-2 h-2 bg-[#FF7122]/80 rounded-full"></div>
+                                Accueil
+                            </Link>
+                            <Link to="fonctionnalites" smooth={true} duration={500} className="flex items-center gap-2 text-gray-600 hover:text-[#FF7122]/80 transition-colors duration-300 cursor-pointer">
+                                <div className="w-2 h-2 bg-[#FF7122]/80 rounded-full"></div>
+                                Fonctionnalités
+                            </Link>
+                            <Link to="etoiles" smooth={true} duration={500} className="flex items-center gap-2 text-gray-600 hover:text-[#FF7122]/80 transition-colors duration-300 cursor-pointer">
+                                <div className="w-2 h-2 bg-[#FF7122]/80 rounded-full"></div>
+                                Étoiles
+                            </Link>
+                            <Link to="abonnements" smooth={true} duration={500} className="flex items-center gap-2 text-gray-600 hover:text-[#FF7122]/80 transition-colors duration-300 cursor-pointer">
+                                <div className="w-2 h-2 bg-[#FF7122]/80 rounded-full"></div>
+                                Abonnements
+                            </Link>
+                            <Link to="avantages" smooth={true} duration={500} className="flex items-center gap-2 text-gray-600 hover:text-[#FF7122]/80 transition-colors duration-300 cursor-pointer">
+                                <div className="w-2 h-2 bg-[#FF7122]/80 rounded-full"></div>
+                                Avantages
+                            </Link>
                         </div>
                     </div>
 
-                    {/* Bouton menu mobile */}
-                    <div className="md:hidden">
-                        <button 
-                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className="text-gray-700 p-2 hover:text-[#FF7122] transition-colors duration-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF7122] focus:ring-opacity-50"
-                            aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
-                        >
-                            {isMobileMenuOpen ? (
-                                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            ) : (
-                                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                                </svg>
-                            )}
-                        </button>
+                    {/* Carte 3 : Téléchargement */}
+                    <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                        <h4 className="text-lg font-bold text-[#FF7122]/80 mb-6">
+                            Actions
+                        </h4>
+                        <div className="space-y-4">
+                            <ButtonStore 
+                                store="Voir la démo"
+                                url=""
+                                icon={Play}
+                                variant="primary"
+                            />
+                            <ButtonStore 
+                                store="Voir le prototype"
+                                url=""
+                                icon={Eye}
+                                variant="outline"
+                            />
+                            {/* <ButtonStore 
+                                store="Télécharger"
+                                url=""
+                                icon={Download}
+                                variant="secondary"
+                            /> */}
+                        </div>
+                        <div className="mt-8 pt-6 border-t border-gray-200">
+                            <div className="flex items-center gap-3 text-gray-600">
+                                <Mail className="w-4 h-4 text-[#FF7122]/80" />
+                                <span>travelbabi@gmail.com</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                {/* Menu mobile avec react-scroll */}
-                {isMobileMenuOpen && (
-                    <div className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
-                        <div className="flex flex-col space-y-2">
-                            {navItems.map((item) => (
-                                <Link
-                                    key={item.id}
-                                    to={item.id}
-                                    spy={true}
-                                    smooth={true}
-                                    offset={getScrollOffset()}
-                                    duration={500}
-                                    onSetActive={handleSetActive}
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                    className={`
-                                        w-full text-gray-700 font-medium px-4 py-3 text-left transition-all duration-300
-                                        hover:text-[#FF7122] hover:bg-gray-50 rounded-lg cursor-pointer
-                                        ${activeSection === item.id ? 'text-[#FF7122] bg-gray-50 font-semibold' : ''}
-                                        flex items-center justify-between
-                                    `}
-                                >
-                                    <span className="flex-1">{item.label}</span>
-                                    {activeSection === item.id && (
-                                        <div className="w-2 h-2 bg-[#FF7122] rounded-full ml-2" />
-                                    )}
-                                </Link>
-                            ))}
-                        </div>
+                {/* Barre du bas */}
+                <div className="border-t-2 border-gray-300 pt-8">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                        <p className="text-gray-600 text-center md:text-left">
+                            © 2024 TravelBabi. Tous droits réservés.
+                        </p>
+                        <p className="text-gray-600">
+                            Développé avec le ❤️ par{' '}
+                            <span 
+                                className="text-[#FF7122]/80 hover:text-[#FF7122] hover:underline cursor-pointer font-medium"
+                                onClick={() => window.open('', '_blank')}
+                            >
+                                JEED
+                            </span>
+                        </p>
                     </div>
-                )}
+                </div>
             </div>
-        </nav>
+        </footer>
     );
-};
+}
 
-export default Navbar;
+export default Footer;
