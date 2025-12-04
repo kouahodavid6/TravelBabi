@@ -103,7 +103,7 @@ const Footer = () => {
                 <div className="border-t-2 border-gray-300 pt-8">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                         <p className="text-gray-600 text-center md:text-left">
-                            © 2024 TravelBabi. Tous droits réservés.
+                            © 2025 TravelBabi. Tous droits réservés.
                         </p>
                         <p className="text-gray-600">
                             Développé avec le ❤️ par{' '}
@@ -111,7 +111,7 @@ const Footer = () => {
                                 className="text-[#FF7122]/80 hover:text-[#FF7122] hover:underline cursor-pointer font-medium"
                                 onClick={() => window.open('', '_blank')}
                             >
-                                JEED
+                                JEED TECH
                             </span>
                         </p>
                     </div>
