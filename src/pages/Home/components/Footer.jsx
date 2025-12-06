@@ -50,6 +50,10 @@ const Footer = () => {
                                 <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#FF7122]/80 rounded-full flex-shrink-0"></div>
                                 Fonctionnalités
                             </Link>
+                            <Link to="screens" smooth={true} duration={500} className="flex items-center gap-2 text-gray-600 hover:text-[#FF7122]/80 transition-colors duration-300 cursor-pointer text-sm md:text-base">
+                                <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#FF7122]/80 rounded-full flex-shrink-0"></div>
+                                Écrans
+                            </Link>
                             <Link to="etoiles" smooth={true} duration={500} className="flex items-center gap-2 text-gray-600 hover:text-[#FF7122]/80 transition-colors duration-300 cursor-pointer text-sm md:text-base">
                                 <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#FF7122]/80 rounded-full flex-shrink-0"></div>
                                 Étoiles
