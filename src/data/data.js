@@ -4,10 +4,10 @@ import { Layers, Map, Coins, Heart,MessageSquare,  Play, ShoppingBag, Crown, Cal
 export const navItems = [
     { id: 'accueil', label: 'Accueil' },
     { id: 'fonctionnalites', label: 'Fonctionnalités' },
+    { id: 'screens', label: 'Écrans' },
     { id: 'etoiles', label: 'Étoiles' },
     { id: 'abonnements', label: 'Abonnements' },
     { id: 'avantages', label: 'Avantages' },
-    { id: 'screens', label: 'Écrans' },
 ];
 
 // Données pour le composant Fonctionnalités
