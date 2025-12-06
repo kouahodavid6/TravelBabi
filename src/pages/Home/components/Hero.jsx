@@ -20,7 +20,7 @@ const Hero = () => {
                         </div>
 
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight text-black">
-                            Maîtrisez le chaos des transports publics.
+                            Maîtrisez le chaos des <span className="text-[#FF7122]">transports publics</span>.
                         </h1>
 
                         <p className="text-base sm:text-lg text-gray-500 leading-relaxed max-w-2xl mx-auto lg:mx-0">

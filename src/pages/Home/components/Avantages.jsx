@@ -6,7 +6,7 @@ const Avantages = () => {
             <div className="container mx-auto px-4 sm:px-6">
                 <div className='mb-12 md:mb-16'>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-center mb-4 text-black">
-                        Pourquoi TravelBabi ?
+                        Pourquoi <span className="text-[#FF7122]">TravelBabi</span> ?
                     </h2>
         
                     <p className="text-base sm:text-lg text-gray-400 text-center max-w-2xl mx-auto">
