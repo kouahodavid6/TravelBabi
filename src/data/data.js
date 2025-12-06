@@ -1,4 +1,24 @@
-import { Layers, Map, Coins, Heart,MessageSquare, Eye, CheckCircle, BarChart3, Play, ShoppingBag, Crown, Calendar, Star, PiggyBank, Zap, Users, Bus, Smartphone, Shield } from 'lucide-react';
+import { 
+    Layers, 
+    Map, 
+    Coins, 
+    Heart,
+    MessageSquare, 
+    Eye, 
+    CheckCircle, 
+    BarChart3, 
+    Play, 
+    ShoppingBag, 
+    Crown, 
+    Calendar, 
+    Star, 
+    PiggyBank, 
+    Zap, 
+    Users, 
+    Bus, 
+    Smartphone, 
+    Shield
+} from 'lucide-react';
 
 // Navbar
 export const navItems = [
