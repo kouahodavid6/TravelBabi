@@ -2,7 +2,7 @@ import { subscriptions } from "../../../data/data";
 
 const Abonnement = () => {
     return (
-        <section id="abonnements" className="bg-gray-50 py-16 md:py-24">
+        <section id="abonnements" className="bg-white py-16 md:py-24">
             <div className="container mx-auto px-4 sm:px-6">
                 <div className='mb-12 md:mb-16'>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-center mb-4 text-black">

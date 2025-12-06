@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 
 const Home = () => {
     return(
-        <>
+        <div className="bg-white">
             <Navbar />
             {/* Animation d'apparition initiale pour Hero */}
             <div data-aos="fade-in" data-aos-duration="1200">
@@ -32,7 +32,7 @@ const Home = () => {
                 <Avantages />
             </div>
             <Footer />
-        </>
+        </div>
     );
 }
 

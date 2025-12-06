@@ -57,7 +57,7 @@ const AppScreens = () => {
     };
 
     return (
-        <section id="screens" className="py-8 sm:py-12 md:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        <section id="screens" className="py-8 sm:py-12 md:py-24 bg-white relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 xl:px-12 2xl:px-16">
                 {/* En-tête */}
                 <div className="mb-12 md:mb-16">
