@@ -114,7 +114,7 @@ export const starOptions = [
         description: 'Packs étoiles: tarifs avantageux, validité prolongée.',
         badge: 'Populaire',
         badgeColor: 'bg-[#FF7122]',
-        stars: 'À partir de 100 étoiles'
+        stars: 'À partir de 50 étoiles'
     },
     {
         icon: Crown,
