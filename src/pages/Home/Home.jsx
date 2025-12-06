@@ -1,10 +1,10 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Fonctionnement from "./components/Fonctionnalites";
+import AppScreens from "./components/AppScreens";
 import Etoiles from "./components/Etoiles";
 import Abonnement from "./components/Abonnement";
 import Avantages from "./components/Avantages";
-import AppScreens from "./components/AppScreens";
 import Footer from "./components/Footer";
 
 const Home = () => {
@@ -15,10 +15,12 @@ const Home = () => {
             <div data-aos="fade-in" data-aos-duration="1200">
                 <Hero />
             </div>
-
             {/* Animations au scroll pour les autres sections */}
             <div data-aos="fade-up" data-aos-delay="100">
                 <Fonctionnement />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <AppScreens />
             </div>
             <div data-aos="fade-up" data-aos-delay="100">
                 <Etoiles />
@@ -28,9 +30,6 @@ const Home = () => {
             </div>
             <div data-aos="fade-up" data-aos-delay="100">
                 <Avantages />
-            </div>
-            <div data-aos="fade-up" data-aos-delay="100">
-                <AppScreens />
             </div>
             <Footer />
         </>
