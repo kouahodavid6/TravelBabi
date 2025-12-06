@@ -1,27 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Eye, CheckCircle, BarChart3 } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { fixedScreens } from '../../../data/data';
 
-// Les écrans fixes
-const fixedScreens = [
-    {
-        image: 'List.png',
-        title: 'Liste des Trajets',
-        description: 'Consultez tous les itinéraires disponibles avec leurs détails complets',
-        icon: <Eye className="w-5 h-5" />
-    },
-    {
-        image: 'Map.png',
-        title: 'Visualisation Cartographique',
-        description: 'Suivez votre trajet en temps réel sur une carte interactive',
-        icon: <BarChart3 className="w-5 h-5" />
-    },
-    {
-        image: 'Details.png',
-        title: 'Détails Complets',
-        description: 'Analysez les coûts, durée et confort de chaque option',
-        icon: <CheckCircle className="w-5 h-5" />
-    }
-];
+
 
 const AppScreens = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -135,7 +116,8 @@ const AppScreens = () => {
                                         {/* Titre avec icône */}
                                         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3">
                                             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-[#FF7122] to-orange-500 rounded-full flex items-center justify-center text-white mb-2 sm:mb-0">
-                                                {screen.icon}
+                                                {/* {screen.icon} */}
+                                                <screen.icon className="w-5 h-5"/>
                                             </div>
                                             <h3 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl font-bold text-gray-900">
                                                 {screen.title}

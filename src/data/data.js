@@ -1,4 +1,4 @@
-import { Layers, Map, Coins, Heart,MessageSquare,  Play, ShoppingBag, Crown, Calendar, Star, PiggyBank, Zap, Users, Bus, Smartphone, Shield } from 'lucide-react';
+import { Layers, Map, Coins, Heart,MessageSquare, Eye, CheckCircle, BarChart3, Play, ShoppingBag, Crown, Calendar, Star, PiggyBank, Zap, Users, Bus, Smartphone, Shield } from 'lucide-react';
 
 // Navbar
 export const navItems = [
@@ -76,54 +76,25 @@ export const testimonials = [
     },
 ];
 
-export const screens = [
+// Les écrans fixes
+export const fixedScreens = [
     {
-        title: 'Splash Screen',
-        description: 'Première impression élégante',
-        image: '/Splash Screen.png',
-        gradient: 'from-orange-400 to-[#FF7122]'
+        image: 'List.png',
+        title: 'Liste des Trajets',
+        description: 'Consultez tous les itinéraires avec leurs détails complets',
+        icon: Eye
     },
     {
-        title: 'Onboarding 1',
-        description: 'Découvrez les fonctionnalités',
-        image: '/Onboarding Screen 1.png',
-        gradient: 'from-blue-400 to-blue-600'
+        image: 'Map.png',
+        title: 'Vue Cartographique',
+        description: 'Suivez votre trajet en temps réel sur une carte interactive',
+        icon: BarChart3
     },
     {
-        title: 'Onboarding 2',
-        description: 'Comment utiliser l\'app',
-        image: '/Onboarding Screen 2.png',
-        gradient: 'from-green-400 to-green-600'
-    },
-    {
-        title: 'Onboarding 3',
-        description: 'Prêt à commencer',
-        image: '/Onboarding Screen 3.png',
-        gradient: 'from-purple-400 to-purple-600'
-    },
-    {
-        title: 'Interface principale',
-        description: 'Accueil et recherche',
-        image: '/Interface.jpg',
-        gradient: 'from-[#FF7122] to-orange-500'
-    },
-    {
-        title: 'Vue liste',
-        description: 'Itinéraires en détail',
-        image: '/List.png',
-        gradient: 'from-pink-400 to-pink-600'
-    },
-    {
-        title: 'Vue carte',
-        description: 'Visualisation géographique',
-        image: '/Map.png',
-        gradient: 'from-teal-400 to-teal-600'
-    },
-    {
-        title: 'Détails',
-        description: 'Informations complètes',
-        image: '/Details.png',
-        gradient: 'from-yellow-400 to-orange-500'
+        image: 'Details.png',
+        title: 'Détails Complets',
+        description: 'Analysez les coûts, durée et confort de chaque option',
+        icon: CheckCircle
     }
 ];
 
