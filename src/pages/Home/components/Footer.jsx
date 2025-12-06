@@ -105,7 +105,7 @@ const Footer = () => {
                             Développé avec le ❤️ par{' '}
                             <span 
                                 className="text-[#FF7122]/80 hover:text-[#FF7122] hover:underline cursor-pointer font-medium"
-                                onClick={() => window.open('', '_blank')}
+                                // onClick={() => window.open('', '_blank')}
                             >
                                 JEED TECH
                             </span>
