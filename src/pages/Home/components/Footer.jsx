@@ -73,14 +73,14 @@ const Footer = () => {
                         <div className="space-y-3 md:space-y-4">
                             <ButtonStore 
                                 store="Voir la démo"
-                                url=""
+                                url="https://www.figma.com/proto/EVahCF5QyBXNyU2tQsk7Eq/TravelBabi?node-id=19-2467&p=f&t=xQvJyOhSx5UngCKB-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
                                 icon={Play}
                                 variant="primary"
                                 className="text-sm md:text-base px-4 py-2 md:px-6 md:py-3"
                             />
                             <ButtonStore 
                                 store="Voir le prototype"
-                                url=""
+                                url="https://www.figma.com/proto/EVahCF5QyBXNyU2tQsk7Eq/TravelBabi?node-id=19-2467&p=f&t=xQvJyOhSx5UngCKB-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
                                 icon={Eye}
                                 variant="outline"
                                 className="text-sm md:text-base px-4 py-2 md:px-6 md:py-3"
