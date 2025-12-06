@@ -1,4 +1,4 @@
-import { Mail, Facebook, Instagram, Twitter, Play, Eye } from 'lucide-react';
+import { Mail, Facebook, Instagram, Twitter, Phone, Play, Eye } from 'lucide-react';
 import ButtonStore from '../../components/ButtonStore';
 import { Link } from 'react-scroll';
 
@@ -23,8 +23,8 @@ const Footer = () => {
                         <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
                             L'application qui révolutionne vos trajets à Abidjan avec des itinéraires intelligents.
                         </p>
-                        <div className="flex gap-2 md:gap-3">
-                            <a href="#" className="p-2 md:p-2.5 rounded-lg bg-gray-100 hover:bg-[#FF7122] hover:text-white transition-all duration-300">
+                        <div className="flex items-center gap-2 md:gap-3">
+                            {/* <a href="#" className="p-2 md:p-2.5 rounded-lg bg-gray-100 hover:bg-[#FF7122] hover:text-white transition-all duration-300">
                                 <Facebook className="w-4 h-4 md:w-5 md:h-5" />
                             </a>
                             <a href="#" className="p-2 md:p-2.5 rounded-lg bg-gray-100 hover:bg-[#FF7122] hover:text-white transition-all duration-300">
@@ -32,7 +32,14 @@ const Footer = () => {
                             </a>
                             <a href="#" className="p-2 md:p-2.5 rounded-lg bg-gray-100 hover:bg-[#FF7122] hover:text-white transition-all duration-300">
                                 <Twitter className="w-4 h-4 md:w-5 md:h-5" />
-                            </a>
+                            </a> */}
+                            <div className="p-2 md:p-2.5 rounded-lg bg-gray-100 hover:bg-[#FF7122] hover:text-white transition-all duration-300">
+                                <Phone className="w-4 h-4 md:w-8 md:h-8" />
+                            </div>
+                            <div>
+                                <p className='text-gray-500 font-bold text-sm md:text-md'>+225 01 01 12 11 60</p>
+                                <p className='text-gray-500 font-bold text-sm md:text-md'>+225 01 71 13 62 61</p>
+                            </div>
                         </div>
                     </div>
 
